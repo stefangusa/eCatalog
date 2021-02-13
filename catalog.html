@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog</title>
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="loader-modal">
+        <div class="loader"></div>
+    </div>
+
+    <div class="info-modal">
+        <div class="info-modal-content">
+            <div class="info-status"></div>
+            <div class="info-message">Info Message</div>
+            <button type="button" class="btn info-modal-ok"><span>Ok</span></button>
+        </div>
+    </div>
+
+    <header>
+        <a class="logo" href="catalog.html">
+            <span class="logo-e">e</span><span class="logo-catalog">catalog</span>
+        </a>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="tabs">
+                <div class="tab tab-list tab-selected">List</div>
+                <div class="tab tab-upload">Upload</div>
+                <div class="tab tab-delete">Delete</div>
+                <div class="tab tab-policies">Policies</div>
+            </div>
+            <div class="p-tabs hidden">
+                <div class="p-tab p-tab-group">Manage Group</div>
+                <div class="p-tab p-tab-user-info">User Info</div>
+                <div class="p-tab p-tab-path-info">Path Info</div>
+                <div class="p-tab p-tab-policy">Manage Policy</div>
+                <div class="p-tab p-tab-get-policy">Policy Info</div>
+                <div class="p-tab p-tab-policies">List Policies</div>
+                <div class="p-tab p-tab-attach-policy">Attach Policy</div>
+            </div>
+            <div class="tab-content">
+                <form action="" enctype="multipart/form-data" autocomplete="off">
+                    <div class="input-blocks input-blocks-s3">
+                        <div class="input-block input-block-username">
+                            <input id="username" type="text" placeholder="username" required>
+                        </div>
+                        <div class="select-block select-clasa">
+                            <input id="clasa" type="text" placeholder="clasa" style="display: none;">
+                            <div class="select-block-selected"></div>
+                            <div class="select-block-options">
+                                <!-- <div class="select-block-option"></div> -->
+                            </div>
+                        </div>
+                        <div class="select-block select-materie">
+                            <input id="materie" type="text" placeholder="materie" style="display: none;">
+                            <div class="select-block-selected"></div>
+                            <div class="select-block-options">
+                                <!-- <div class="select-block-option"></div> -->
+                            </div>
+                        </div>
+                        <div class="select-block select-elev">
+                            <input id="elev" type="text" placeholder="elev" style="display: none;">
+                            <div class="select-block-selected"></div>
+                            <div class="select-block-options">
+                                <!-- <div class="select-block-option"></div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-blocks input-blocks-policies hidden">
+                        <div class="input-block input-block-p-username">
+                            <input id="p-username" type="text" placeholder="username" required>
+                        </div>
+                        <div class="input-block input-block-p-user">
+                            <input id="p-user" type="text" placeholder="user" required>
+                        </div>
+                        <div class="input-block input-block-p-group">
+                            <input id="p-group" type="text" placeholder="group" required>
+                        </div>
+                        <div class="input-block input-block-p-policy-name">
+                            <input id="p-policy-name" type="text" placeholder="policy name" required>
+                        </div>
+                        <div class="input-block input-block-p-method">
+                            <input id="p-method" type="text" placeholder="method" required>
+                        </div>
+                        <div class="input-block input-block-p-path">
+                            <input id="p-path" type="text" placeholder="path" required>
+                        </div>
+                        <div class="input-block input-block-p-version">
+                            <input id="p-version" type="text" placeholder="version" required>
+                        </div>
+                        <div class="input-block input-block-p-entity-name">
+                            <input id="p-entity-name" type="text" placeholder="entity name" required>
+                        </div>
+                        <div class="input-block input-block-p-entity-type">
+                            <input id="p-entity-type" type="text" placeholder="entity type" required>
+                        </div>
+                    </div>
+
+                    <div class="btns">
+                        <div class="file-upload-wrapper" data-text="Select your file!">
+                            <label for="file-upload-field" class="btn file-upload-label"><span>File to upload</span></label>
+                            <input id="file-upload-field" name="file-upload-field" type="file" class="file-upload-field" value="" required>
+                            <div class="file-upload-name">No file chosen</div>
+                        </div>
+                        <div class="btn-container request-btn-container">
+                            <button type="submit" id="submit" class="btn"><span>Request</span></button>
+                        </div>
+                        <div class="btn-container submit-policy-request-container">
+                            <button type="button" id="submit-policy-request" class="btn"><span>Request Policy</span></button>
+                        </div>
+                        <div class="btn-container submit-delete">
+                            <button type="button" id="submit-delete" class="btn"><span>Unset Policy</span></button>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content-list">
+                        <div class="no-files-found">No files found</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
